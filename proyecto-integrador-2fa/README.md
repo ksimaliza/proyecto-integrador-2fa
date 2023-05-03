@@ -1,4 +1,4 @@
-Alcance
+#Alcance
 La plataforma web habilitará a sus usuarios para autenticarse empleando el mecanismo de doble factor (2FA).
 Objetivos:
 1.	Identificar las principales API de ciberseguridad: Se deben identificar las principales API de ciberseguridad que se utilizarán en el proyecto.
@@ -6,5 +6,8 @@ Objetivos:
 3.	Implementar las funciones principales: Se deben implementar las funciones principales del sistema, como la generación y envío de códigos de verificación por SMS o aplicación de autenticación.
 4.	Añadir funciones adicionales: Se pueden añadir funciones adicionales al sistema, como la opción de recordar dispositivos y evitar la autenticación de 2FA en esos dispositivos.
 5.	Probar el sistema: Es importante realizar pruebas exhaustivas del sistema para asegurarse de que todas las funciones funcionan correctamente y el sistema es seguro.
-6.	Desplegar el sistema: El sistema debe ser desplegado en un entorno de producción seguro y escalable. [2] [3]
+6.	Desplegar el sistema: El sistema debe ser desplegado en un entorno de producción seguro y escalable.
+
+![image](https://user-images.githubusercontent.com/12319705/235963430-373cd3a6-0a38-4a2a-a52a-33c006875558.png)
+
 
