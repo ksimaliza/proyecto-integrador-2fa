@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="ISO-8859-1">
+
+        <link rel="stylesheet" 
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    </head>
+    <style>
+        .navbar {
+            background-color: #d9edf7;
+        }
+
+
+    </style>
+
+    <body >
+
+        <!-- create navigation bar ( header) -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <h1>Sistema de autenticaci&#243;n de dos factores (2FA)</h1>
+            </div>
+        </nav>
+        <br><br><br><br><br><br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div th:if="${param.error}">
+                        <div class="alert alert-danger">C&#243;digo ingresado incorrecto.</div>
+                    </div>
+                    <h1>Ingrese el c&#243;digo sms:</h1>
+                    <form th:action="@{/login/otpVerification}" method="post" 
+                          th:object="${otpValue}">
+                        <div class="form-group">
+                            <input id="otp" class="form-control" type="password"
+                                   th:field="*{otp}" required autofocus="autofocus" 
+                                   />
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                Verificar </button>
+                            <span>Login <a href="/" 
+                                           th:href="@{/login}">Login
+                                </a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

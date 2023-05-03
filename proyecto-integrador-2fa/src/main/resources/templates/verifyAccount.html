@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="ISO-8859-1">
+        <link rel="stylesheet" 
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    </head>
+    <style>
+        .navbar {
+            background-color: #d9edf7;
+        }
+    </style>
+
+    <body>
+
+        <!-- create navigation bar ( header) -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <h2> Sistema de autenticaci&#243;n de dos factores (2FA)</h2>
+                </div>
+            </div>
+        </nav>
+
+        <br><br><br><br><br><br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+
+                    <h1>Verificar la cuenta creada:</h1>  
+                    <form th:action="@{/verifyAccount/validar/{id}(id=${usuario.id})}" th:object="${usuario}" method="POST">
+                        <div th:if=${param.error}>
+                            <div class="alert alert-danger">C&#243;digo Incorrecto</div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="code">Ingrese el c&#243;digo sms : </label> <input
+                                id="code" class="form-control" th:field="*{otp}"
+                                required autofocus="autofocus">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success">Verificar</button>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

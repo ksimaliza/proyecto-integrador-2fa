@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    
+<link rel="stylesheet" 
+ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<style>
+    .navbar {
+        background-color: #d9edf7;
+    }
+    .anchor{
+    margin: 6px;
+    background-color: #d9edf7;
+    border-color: #d9edf7;
+    }
+    
+    input, label {
+    display:block;
+}
+   
+</style>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                            <h1> Sistema de autenticaci&#243;n de dos factores (2FA)</h1>
+                            <div class="container">
+                            <div class="row">
+                            <div class="col-md-6">
+                           <h4> BIENVENIDO: <span th:text ="*{userDetails}"></span> </h4></div>      
+                           <div class="col-md-3">
+                           <a th:href="@{/logout}" class="btn anchor" style="margin-left:500px"> <i class="fa fa-arrow-circle-o-left"></i>&nbsp;Cerrar Sesi&#243;n</a>
+                           </div>
+          </div>      
+           </div> 
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br><br><br><br><br>
+    <!-- Create HTML registration form -->
+    <div class="container">
+        <div class="row">
+			<h2>Spring Boot + Security + API de Twilio</h2>
+        </div>
+    </div>
+    
+</body>
+</html>

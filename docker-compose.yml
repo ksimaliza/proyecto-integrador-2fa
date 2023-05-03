@@ -1,0 +1,15 @@
+services:
+  spring:
+    image: 'ksimaliza/2fa:latest'
+    build:
+      context: proyecto-integrador-2fa      
+      dockerfile: Dockerfile
+    expose:
+      - "8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db-2fa-ups.postgres.database.azure.com:5432/postgres
+      - SPRING_DATASOURCE_USERNAME=ksimaliza87
+      - SPRING_DATASOURCE_PASSWORD=prueba87#
+volumes:
+  db-data:
